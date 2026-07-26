@@ -18,12 +18,12 @@
   --bg-secondary: #1e293b;
   --bg-tertiary: #334155;
   --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --accent-orange: #f97316;
-  --accent-orange-glow: rgba(249, 115, 22, 0.35);
-  --accent-cyan: #38bdf8;
-  --accent-cyan-glow: rgba(56, 189, 248, 0.3);
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent-orange: #fb923c;
+  --accent-orange-glow: rgba(251, 146, 60, 0.35);
+  --accent-cyan: #7dd3fc;
+  --accent-cyan-glow: rgba(125, 211, 252, 0.3);
   --glass-bg: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-hover: rgba(255, 255, 255, 0.08);
@@ -1259,4 +1259,22 @@ ul, ol {
 
 .manifesto-content th {
   background: var(--bg-surface);
+}
+.manifesto-content strong {
+  color: var(--accent-orange);
+  font-weight: 700;
+}
+
+.manifesto-content em {
+  color: var(--accent-cyan);
+  font-style: italic;
+}
+
+.manifesto-content code {
+  background: var(--code-bg);
+  color: #22c55e;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.9em;
 }
