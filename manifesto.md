@@ -37,15 +37,36 @@ We believe software should begin with an explicit, governed constitution.
 
 ## We have come to value
 
-- **Explicit laws** over hidden assumptions
-- **Valid models** over late corrective validation
-- **Reproducible evidence** over confident claims
-- **Deterministic verdicts** over probabilistic guesses
-- **Visible uncertainty** over silent approximation
-- **Accountable human stewardship** over automated authority
+<div class="values-grid">
+  <div class="value-card">
+    <div class="value-primary">Explicit laws</div>
+    <div class="value-secondary">hidden assumptions</div>
+  </div>
+  <div class="value-card">
+    <div class="value-primary">Valid models</div>
+    <div class="value-secondary">late corrective validation</div>
+  </div>
+  <div class="value-card">
+    <div class="value-primary">Reproducible evidence</div>
+    <div class="value-secondary">confident claims</div>
+  </div>
+  <div class="value-card">
+    <div class="value-primary">Deterministic verdicts</div>
+    <div class="value-secondary">probabilistic guesses</div>
+  </div>
+  <div class="value-card">
+    <div class="value-primary">Visible uncertainty</div>
+    <div class="value-secondary">silent approximation</div>
+  </div>
+  <div class="value-card">
+    <div class="value-primary">Accountable human stewardship</div>
+    <div class="value-secondary">automated authority</div>
+  </div>
+</div>
 
-The things on the right can remain useful. When they conflict, the things
-on the left govern the system.
+<div class="value-caveat">
+  The things on the right can remain useful. When they conflict, the things on the left govern the system.
+</div>
 
 ## Our method
 
