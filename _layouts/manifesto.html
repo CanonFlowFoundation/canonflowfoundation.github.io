@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CanonFlow Foundation — Deterministic Semantic Infrastructure</title>
+  <meta name="description" content="The CanonFlow Foundation builds open-source verification engines that mathematically prove compliance. Pure functional F# compiled to native AOT and WebAssembly." />
+  <meta name="keywords" content="CanonFlow, GSTFlow, EDIFlow, F#, WebAssembly, AOT, verification, compliance, open source" />
+  <meta property="og:title" content="CanonFlow Foundation" />
+  <meta property="og:description" content="Deterministic Semantic Infrastructure — open-source verification engines that mathematically prove compliance." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- Background Orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="nav-main">
+    <div class="container nav__inner">
+      <a href="#" class="nav__brand" id="nav-brand">
+        <span class="nav__brand-icon">◈</span>
+        <span><span class="nav__brand-accent">Canon</span>Flow Foundation</span>
+      </a>
+
+      <div class="nav__links" id="nav-links">
+        <a href="/manifesto/" class="nav__link" id="nav-link-manifesto">Manifesto</a>
+        <a href="#projects" class="nav__link" id="nav-link-projects">Projects</a>
+        <a href="#architecture" class="nav__link" id="nav-link-architecture">Architecture</a>
+        <a href="#rfcs" class="nav__link" id="nav-link-rfcs">RFCs</a>
+        <a href="#roadmap" class="nav__link" id="nav-link-roadmap">Roadmap</a>
+        <a href="#docs" class="nav__link" id="nav-link-docs">Documentation</a>
+        <a href="#community" class="nav__link" id="nav-link-community">Community</a>
+        <a href="#contributing" class="nav__link" id="nav-link-contributing">Contributing</a>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="icon-dark">🌙</span>
+          <span class="icon-light">☀️</span>
+        </button>
+        <button class="nav__mobile-toggle" id="nav-mobile-toggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== MANIFESTO CONTENT ========== -->
+  <section class="section manifesto-wrapper" style="margin-top: 60px;">
+    <div class="container">
+      <div class="manifesto-content reveal">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand" id="footer-brand">
+        ◈ CanonFlow Foundation
+      </div>
+      <div class="footer__copy" id="footer-copy">
+        © 2026 CanonFlow Foundation · MIT License
+      </div>
+      <div class="footer__links">
+        <a href="https://github.com/CanonFlowFoundation" target="_blank" rel="noopener"
+           class="footer__link" id="footer-link-github">GitHub</a>
+        <a href="#docs" class="footer__link" id="footer-link-docs">Documentation</a>
+        <a href="#contributing" class="footer__link" id="footer-link-contributing">Contributing</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // ----- Theme Toggle -----
+    (function () {
+      const toggle = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+
+      // Restore saved theme
+      const saved = localStorage.getItem('cf-theme');
+      if (saved) root.setAttribute('data-theme', saved);
+
+      toggle.addEventListener('click', function () {
+        const current = root.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('cf-theme', next);
+      });
+    })();
+
+    // ----- Mobile Navigation -----
+    (function () {
+      const mobileToggle = document.getElementById('nav-mobile-toggle');
+      const navLinks = document.getElementById('nav-links');
+
+      mobileToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+        mobileToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+      });
+
+      // Close mobile nav on link click
+      navLinks.querySelectorAll('.nav__link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('active');
+          mobileToggle.textContent = '☰';
+        });
+      });
+    })();
+
+    // ----- Scroll Reveal -----
+    (function () {
+      var reveals = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      reveals.forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>

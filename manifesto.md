@@ -1,4 +1,5 @@
 ---
+layout: manifesto
 title: Constitution-First Software Manifesto
 permalink: /manifesto/
 version: "Draft 0.1"
